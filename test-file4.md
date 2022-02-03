@@ -1,3 +1,12 @@
-# title
+[](a link on the first line)
+[]()
 
-[]https://something.com
+beep
+
+[linkname]oh (wow)
+
+boop 
+
+[link number 2] (doot)
+
+hello
