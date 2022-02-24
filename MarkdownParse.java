@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
+//check for image
 public class MarkdownParse {
     public static ArrayList<String> getLinks(String markdown) throws IOException {
         ArrayList<String> toReturn = new ArrayList<>();
