@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-//check for image
 public class MarkdownParse {
     public static ArrayList<String> getLinks(String markdown) throws IOException {
         ArrayList<String> toReturn = new ArrayList<>();
@@ -21,6 +20,12 @@ public class MarkdownParse {
             //checks for infinite looping
             if (nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1) {
                 break;
+            }
+
+            //checks for image
+            if(nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){   
+                currentIndex = nextOpenBracket+1;  
+                continue;   
             }
 
             //checks for brackets and parentheses with stuff between them, and empty links
